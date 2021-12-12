@@ -1,7 +1,7 @@
-package de.codeshield.log4jcheck;
+package de.codeshield.log4jshell;
 
-import de.codeshield.log4jcheck.data.GAVWithClassifier;
-import de.codeshield.log4jcheck.data.VulnerableGavsData;
+import de.codeshield.log4jshell.data.GAVWithClassifier;
+import de.codeshield.log4jshell.data.VulnerableGavsData;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;

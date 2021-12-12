@@ -1,3 +1,5 @@
+![alt text](logo.png | width=150)
+
 # Log4JShell Bytecode Detector
 
 This repository contains a tool to detect if a jar file is affected by the critical CVE-2021-44228. The tool scans the jar file and compares the classses against a set of vulnerable hashes for classes within the jar file. The hashes have been pre-computed for artifacts on [Maven Central](https://mvnrepository.com/repos/central).
@@ -5,7 +7,7 @@ This repository contains a tool to detect if a jar file is affected by the criti
 ## How to run this tool
 
 1. Download the jar file under releases. TODO add link.
-2. Run `java -cp <PATH_TO_DOWNLOADED_JAR> de.codeshield.log4jcheck.Log4JDetector <PATH_TO_`
+2. Run `java -cp <PATH_TO_DOWNLOADED_JAR> de.codeshield.log4jshell.Log4JDetector <PATH_TO_`
 
 
 If the jar is affected, the tool outputs information to the command-line:
@@ -73,9 +75,12 @@ As affected version range we considered [2.0-beta9, 2.14) [Reference](https://lo
 ## Fingerprinting Technology
 This tool uses a new bytecode fingerprinting technology for Java that has been invented by Andreas Dann. The basic flow is as follows. 
 1. Use the available fix commits [Commit1](https://gitbox.apache.org/repos/asf?p=logging-log4j2.git;h=7fe72d6), [Commit2](https://gitbox.apache.org/repos/asf?p=logging-log4j2.git;h=d82b47c), and [Commit3](https://gitbox.apache.org/repos/asf?p=logging-log4j2.git;h=c77b3cb) to identify which classes are affected.
-2. Compute bytecode hashes using the Fingerprinting technologites of the vulnerable classes.
-3. Search for other classes on MavenCentral whose fingerprint match.
+2. Compute bytecode "Fingerprints" of vulnerable classes.
+3. Search for other classes on MavenCentral with same "Fingerprint".
 
 Details on the technology are found in the paper [SootDiff](https://dl.acm.org/doi/10.1145/3315568.3329966). 
 
 *Note: This repository does only ship SHA hashes of the vulnerable classes and does not compute the Fingerprint on your jar*
+
+## If you want to learn more about the technology, reach out to us!
+https://codeshield.io/

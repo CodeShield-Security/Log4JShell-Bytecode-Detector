@@ -1,6 +1,6 @@
-package de.codeshield.log4jcheck;
+package de.codeshield.log4jshell;
 
-import de.codeshield.log4jcheck.data.VulnerableClassSHAData;
+import de.codeshield.log4jshell.data.VulnerableClassSHAData;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Set;

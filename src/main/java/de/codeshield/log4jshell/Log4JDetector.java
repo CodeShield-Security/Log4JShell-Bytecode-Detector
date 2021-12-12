@@ -1,10 +1,7 @@
-package de.codeshield.log4jcheck;
+package de.codeshield.log4jshell;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Enumeration;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;

@@ -1,4 +1,4 @@
-package de.codeshield.log4jcheck.data;
+package de.codeshield.log4jshell.data;
 
 import java.util.Objects;
 

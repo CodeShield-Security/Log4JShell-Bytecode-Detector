@@ -64,7 +64,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>de.codeshield.log4jcheck.Log4JDetector</mainClass>
+              <mainClass>de.codeshield.log4jshell.Log4JDetector</mainClass>
             </manifest>
           </archive>
           <descriptorRefs>
