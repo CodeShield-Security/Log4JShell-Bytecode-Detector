@@ -80,7 +80,7 @@ This tool uses a new bytecode fingerprinting technology for Java that has been i
 
 Details on the technology are found in the paper [SootDiff](https://dl.acm.org/doi/10.1145/3315568.3329966). 
 
-*Note: For a simpler roll out, this repository does ship SHA hashes of the vulnerable classes, the information has been computed using using Fingerprinting*
+*Note: For a simpler roll out, this repository does ship SHA hashes of the vulnerable classes, the information has been computed using Fingerprinting*
 
 ## If you want to learn more about the technology, reach out to us!
 https://codeshield.io/
