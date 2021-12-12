@@ -4,7 +4,7 @@ This repository contains a tool to detect if a jar file is affected by the criti
 A serious Remote Code Execution vulnerability has been discovered within log4j and version 2.0-beta9 to 2.14 are affected. The vulnerability has been classified as critical, as it affected log4j one of the most used logging libraries for Java. [References](https://thehackernews.com/2021/12/extremely-critical-log4j-vulnerability.html).  
 
 # Why is it important?
-Log4j is and has been used in mostly any Java project for logging purporse. Now we need to understand which projects and libraries are actually affected. As of Java's dependency mechanism, an application can also be affected if it `transitively` includes the vulnerable library version. A project `A` includes a library lib  `transitively`, if one of the direct dependecy `B` of `A` has a dependecy to `lib`. A simple test if one is affected can be done using using the maven dependecy tree:
+Log4j is and has been used in mostly any Java project for logging purporse. Now we need to understand which projects and libraries are actually affected. As of Java's dependency mechanism, an application can also be affected if it `transitively` includes the vulnerable library version. A project `A` includes a library `lib  `transitively`, if one of the direct dependecy `B` of `A` has a dependecy to `lib`. A simple test if one is affected can be done using using the maven dependecy tree:
 
 Example: Execute command `mvn dependency:tree` on a maven project. 
 
