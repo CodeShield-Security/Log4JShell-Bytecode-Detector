@@ -1,0 +1,5 @@
+GroupId,ArtifactId,Version,Classifier
+io.bluebank.braid,braid-server,4.1.1-patch-01,
+com.helger.en16931,en16931-xml-validator,2.0.0-b2,jar-with-dependencies
+org.apache.logging.log4j,log4j-core,2.14.1,
+org.apache.logging.log4j,log4j-core,2.8.2,

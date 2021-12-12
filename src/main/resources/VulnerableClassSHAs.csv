@@ -1,0 +1,4 @@
+ClassName,VulnerableClassSHA
+org/apache/logging/log4j/core/net/JndiManager.class,764b06686dbe06e3d5f6d15891250ab04073a0d1c357d114b7365c70fa8a7407
+org/apache/logging/log4j/core/net/JndiManager$JndiManagerFactory.class,632a69aef3bc5012f61093c3d9b92d6170fdc795711e9fed7f5388c36e3de03d
+org/apache/logging/log4j/core/net/JndiManager$1.class,e4906e06c4e7688b468524990d9bb6460d6ef31fe938e01561f3f93ab5ca25a6
