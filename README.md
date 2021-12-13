@@ -45,7 +45,6 @@ Java programs are frequently:
 
 Consquently, _*any*_ library a Java project is using can include the vulnerability into your project. An in-depth bytecode analysis helps, which is what we publish as part of this repository. 
 
-
 ## How the script works
 1. Extract pom.xml files from .jar 
 2. check declared dependencies against a [pre-computed list](src/main/resources/VulnerableGavs.csv) of affected groupId:artifactId:version list for artifacts hosten on Maven Central
@@ -58,6 +57,10 @@ Consquently, _*any*_ library a Java project is using can include the vulnerabili
 To build this tool run 
 
 `mvn compile`
+
+For assembling a runnable `jar` use
+
+`mvn clean compile assembly:single`
 
 ## Precomputed Hashes of Vulnerable Classes
 
@@ -81,6 +84,10 @@ This tool uses a new bytecode fingerprinting technology for Java that has been i
 Details on the technology are found in the paper [SootDiff](https://dl.acm.org/doi/10.1145/3315568.3329966). 
 
 *Note: For a simpler roll out, this repository does ship SHA hashes of the vulnerable classes, the information has been computed using Fingerprinting*
+
+## Disclaimers
+
+The list of hashes and maven artifacts is not complete. We'll regularly update the lists.
 
 ## Authors
 
