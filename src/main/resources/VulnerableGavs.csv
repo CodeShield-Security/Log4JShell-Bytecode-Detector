@@ -74,6 +74,7 @@ it.netgrid.got,gatekeeper,0.0.4,stand-alone
 org.alindner.cish,compiler,88a11bd,jar-with-dependencies
 org.apache.hadoop,hadoop-ozone-objectstore-service,0.4.1-alpha,plugin
 org.apache.hive,hive-jdbc,2.1.1,standalone
+org.apache.logging.log4j,log4j-core,2.0-beta9
 org.apache.logging.log4j,log4j-core,2.0,
 org.apache.logging.log4j,log4j-core,2.0-rc1,
 org.apache.logging.log4j,log4j-core,2.0-rc2,
