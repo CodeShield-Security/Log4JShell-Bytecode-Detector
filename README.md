@@ -84,8 +84,8 @@ Details on the technology are found in the paper [SootDiff](https://dl.acm.org/d
 
 ## Authors
 
-Andreas Dann <andreas.dann@codeshield.io>
-Johannes Spaeth  <johannes.spaeth@codeshield.io> 
+* Andreas Dann <andreas.dann@codeshield.io>
+* Johannes Spaeth  <johannes.spaeth@codeshield.io> 
 
 ## If you want to learn more about the technology, reach out to us!
 https://codeshield.io/
