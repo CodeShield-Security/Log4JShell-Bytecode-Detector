@@ -7,7 +7,7 @@
 
   <groupId>de.codeshield.log4shell</groupId>
   <artifactId>Log4JDetector</artifactId>
-  <version>0.2</version>
+  <version>0.3</version>
 
   <name>cve-2021-44228-detector</name>
   <url>http://www.codeshield.io</url>
@@ -30,7 +30,11 @@
       <artifactId>maven-model</artifactId>
       <version>3.8.4</version>
     </dependency>
-
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.11.0</version>
+    </dependency>
     <!-- https://mvnrepository.com/artifact/org.apache.maven/maven-project -->
     <dependency>
       <groupId>org.apache.maven</groupId>
