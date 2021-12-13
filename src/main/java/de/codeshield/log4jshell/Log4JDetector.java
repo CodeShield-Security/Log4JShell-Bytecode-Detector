@@ -110,12 +110,12 @@ public class Log4JDetector {
         DirectoryFileFilter.DIRECTORY
     );
 
-    for (File pomFile : classFiles) {
-      try (FileInputStream is = new FileInputStream(pomFile)) {
+    for (File classFile : classFiles) {
+      try (FileInputStream is = new FileInputStream(classFile)) {
         //Check if a class file matches one of the pre-computed vulnerable SHAs.
         if (ClassDetector.isVulnerableClass(is)) {
           isVulnerable = true;
-          System.err.println("CVE-2021-44228 found declared as dependency in " + pomFile);
+          System.err.println("CVE-2021-44228 found declared as dependency in " + classFile);
         }
       }
     }
