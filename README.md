@@ -6,7 +6,7 @@ This repository contains a tool to detect if a jar file is affected by the criti
 
 ## How to run this tool
 
-1. Download the jar file under releases. TODO add link.
+1. Download the [jar file](https://github.com/CodeShield-Security/Log4JShell-Bytecode-Detector/releases/tag/v0.1#:~:text=Log4JDetector%2D0.1%2Djar%2Dwith%2Ddependencies.jar) under releases. 
 2. Run `java -cp <PATH_TO_DOWNLOADED_JAR> de.codeshield.log4jshell.Log4JDetector <PATH_TO_`
 
 
