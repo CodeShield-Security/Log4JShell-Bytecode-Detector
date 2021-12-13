@@ -81,8 +81,6 @@ This tool uses a new bytecode fingerprinting technology for Java that has been i
 2. Compute bytecode "Fingerprints" of vulnerable classes.
 3. Search for other classes on MavenCentral with same "Fingerprint".
 
-Details on the technology are found in the paper [SootDiff](https://dl.acm.org/doi/10.1145/3315568.3329966). 
-
 *Note: For a simpler roll out, this repository does ship SHA hashes of the vulnerable classes, the information has been computed using Fingerprinting*
 
 ## Disclaimers
