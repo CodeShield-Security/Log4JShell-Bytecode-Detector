@@ -82,5 +82,11 @@ Details on the technology are found in the paper [SootDiff](https://dl.acm.org/d
 
 *Note: For a simpler roll out, this repository does ship SHA hashes of the vulnerable classes, the information has been computed using Fingerprinting*
 
+## Authors
+
+Andreas Dann <andreas.dann@codeshield.io>
+Johannes Spaeth  <johannes.spaeth@codeshield.io> 
+
 ## If you want to learn more about the technology, reach out to us!
 https://codeshield.io/
+
