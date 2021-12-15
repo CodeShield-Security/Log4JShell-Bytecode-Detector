@@ -46,15 +46,20 @@ public class Log4JProcessDetector {
         String cpArgs = outputLine.substring(i + searchStr.length() + 1);
 
         // scan for jar files
-        String[] cpArgsSplit = cpArgs.split(File.pathSeparator + "");
+        String[] cpArgsSplit = cpArgs.split(File.pathSeparator);
         final List<String> foundJarsOnCp =
             Arrays.stream(cpArgsSplit)
                 .map(x -> StringUtils.substring(x, 0, StringUtils.indexOf(x, ".jar") + 4))
                 .collect(Collectors.toList());
 
         for (String jarFile : foundJarsOnCp) {
-          Log4JDetector detector = new Log4JDetector();
-          detector.run(args[0]);
+          try {
+            Log4JDetector detector = new Log4JDetector();
+            System.out.println("Scanning jar file " + jarFile);
+           // detector.run(jarFile);
+          } catch (Exception e){
+            System.out.println("Could not scan jar file " + jarFile);
+          }
         }
 
       } else {
