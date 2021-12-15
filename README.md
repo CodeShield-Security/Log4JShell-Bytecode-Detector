@@ -4,6 +4,8 @@
 
 This repository contains a tool to detect if a jar file is affected by the critical CVE-2021-44228. The tool scans the jar file and compares the classses against a set of vulnerable hashes for classes within the jar file. The hashes have been pre-computed for artifacts on [Maven Central](https://mvnrepository.com/repos/central).
 
+**IMPORTANT UPDATE: We updated [the list of affected artifacts](src/main/resources/VulnerableGavs.csv) on Maven Central. The list contains 18.816 artifacts. The artifacts either use log4j-core as declared dependency, or we identified .class files within the artifacts that match to the affected versions of log4j-core.**
+
 ## How to run this tool
 
 1. Download the [jar file](https://github.com/CodeShield-Security/Log4JShell-Bytecode-Detector/releases/download/v0.4/Log4JDetector-0.4-jar-with-dependencies.jar) under releases. 
@@ -100,5 +102,6 @@ The list of hashes and maven artifacts is not complete. We'll regularly update t
 * Johannes Spaeth  <johannes.spaeth@codeshield.io> 
 
 ## If you want to learn more about the technology, reach out to us!
+
 https://codeshield.io/
 
