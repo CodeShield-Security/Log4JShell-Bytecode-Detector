@@ -80,7 +80,7 @@ The pre-computed information contains:
 * all artifacts that rebundle a vulnerable class of log4j 
 * all artifacts that have a re-compiled class of a class of log4j in the affected version range
 
-As affected version range we considered [2.0-beta9, 2.14) [Reference](https://logging.apache.org/log4j/2.x/security.html).
+As affected version range we considered [2.0-beta9, 2.15) [Reference](https://logging.apache.org/log4j/2.x/security.html).
 
 ## Fingerprinting Technology
 This tool uses a new bytecode fingerprinting technology for Java that has been invented by Andreas Dann. The basic flow is as follows. 
