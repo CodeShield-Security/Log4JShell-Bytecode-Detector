@@ -23,13 +23,11 @@ public class Log4JProcessDetector {
 
     Process process = new ProcessBuilder(commands).start();
     BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-    StringBuilder builder = new StringBuilder();
     List<String> lines = new ArrayList<>();
     String line = null;
     while ((line = reader.readLine()) != null) {
       lines.add(line);
     }
-    String result = builder.toString();
 
     // analyze each output
     // search for the "-classpath" parameter
@@ -67,7 +65,5 @@ public class Log4JProcessDetector {
         continue;
       }
     }
-
-    System.out.println(result);
   }
 }
