@@ -4,7 +4,7 @@
 
 This repository contains a tool to detect if a jar file is affected by the critical CVE-2021-44228. The tool scans the jar file and compares the classses against a set of vulnerable hashes for classes within the jar file. The hashes have been pre-computed for artifacts on [Maven Central](https://mvnrepository.com/repos/central).
 
-**IMPORTANT UPDATE: We updated [the list of affected artifacts](src/main/resources/VulnerableGavs.csv) on Maven Central. The list contains 18.816 artifacts. The artifacts either use log4j-core as declared dependency, or we identified .class files within the artifacts that match to the affected versions of log4j-core.**
+**IMPORTANT UPDATE: We extended [the list of affected artifacts](src/main/resources/VulnerableGavs.csv) on Maven Central. The list contains 18.816 artifacts. The artifacts either use log4j-core as declared dependency, or we identified .class files within the artifacts that match to the affected versions of log4j-core.**
 
 ## How to run this tool
 
