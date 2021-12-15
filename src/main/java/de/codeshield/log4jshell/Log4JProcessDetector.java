@@ -34,8 +34,14 @@ public class Log4JProcessDetector {
     // analyze each output
     // search for the "-classpath" parameter
     for (String outputLine : lines) {
-      final String searchStr = "-classpath";
-      final int i = StringUtils.indexOf(outputLine, searchStr);
+      String searchStr = "-classpath";
+      int i = StringUtils.indexOf(outputLine, searchStr);
+      if (i == -1) {
+        // check if someone used -cp
+        searchStr = "-cp";
+        i = StringUtils.indexOf(outputLine, searchStr);
+      }
+
       if (i > 0) {
         String cpArgs = outputLine.substring(i + searchStr.length() + 1);
 
