@@ -21,7 +21,7 @@ public class Log4JDetectorTests {
   @Test
   public void checkSecure() throws IOException, URISyntaxException {
     assertFalse(checkResourceFile("/spring-boot-2.5.7.jar"));
-    assertFalse(checkResourceFile("/log4j-core-2.15.0.jar"));
+    assertTrue(checkResourceFile("/log4j-core-2.15.0.jar"));
   }
 
   private boolean checkResourceFile(String url) throws IOException, URISyntaxException {
