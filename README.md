@@ -94,7 +94,7 @@ This tool uses a new bytecode fingerprinting technology for Java that has been i
 
 ## Disclaimers
 
-The list of hashes and maven artifacts is not complete. We'll regularly update the lists.
+The list of hashes and maven artifacts is not complete. We will regularly update the lists.
 
 ## Authors
 
