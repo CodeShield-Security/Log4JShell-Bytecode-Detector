@@ -19,7 +19,7 @@ CVE-2021-44228 found declared as dependency in META-INF/maven/org.apache.logging
 CVE-2021-44228 found in class file org/apache/logging/log4j/core/net/JndiManager$1.class
 ```
 
-## 📝 How to run on a live server (no need to stop running your Java instances)
+## 📝 How to run on a live server (no need to stop your running Java instances)
 
 1. Download the [jar file](https://github.com/CodeShield-Security/Log4JShell-Bytecode-Detector/releases/download/v0.5/Log4JDetector-0.5-jar-with-dependencies.jar) under releases.
 2. Run `java -cp <PATH_TO_DOWNLOADED_JAR> de.codeshield.log4jshell.Log4JProcessDetector`
