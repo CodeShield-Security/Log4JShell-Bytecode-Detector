@@ -2,20 +2,21 @@ package de.codeshield.log4jshell;
 
 import de.codeshield.log4jshell.data.GAVWithClassifier;
 import de.codeshield.log4jshell.data.VulnerableGavsData;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.List;
-import java.util.Set;
 import org.apache.maven.model.Dependency;
 import org.apache.maven.model.Model;
 import org.apache.maven.model.io.xpp3.MavenXpp3Reader;
 import org.apache.maven.project.MavenProject;
 import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.List;
+import java.util.Set;
+
 public class POMDetector {
 
-  private static final Set<GAVWithClassifier> VULNERABLE_GAV_DATA = VulnerableGavsData
-      .readDataFromCSV();
+  private static final Set<GAVWithClassifier> VULNERABLE_GAV_DATA =
+      VulnerableGavsData.readDataFromCSV();
 
   public static boolean isVulnerablePOM(InputStream inputStream) {
     final MavenXpp3Reader mavenreader = new MavenXpp3Reader();
@@ -24,12 +25,12 @@ public class POMDetector {
       model = mavenreader.read(inputStream);
       MavenProject mavenProject = new MavenProject(model);
 
-      //Check whether the Maven Project or any of its parents is affected.
+      // Check whether the Maven Project or any of its parents is affected.
       if (isVulnerableProject(mavenProject)) {
         return true;
       }
 
-      //Check if any of the dependencies is affected.
+      // Check if any of the dependencies is affected.
       List dependencies = mavenProject.getDependencies();
       for (Object dependency : dependencies) {
         if (!(dependency instanceof Dependency)) {
@@ -37,8 +38,8 @@ public class POMDetector {
         }
         Dependency dep = (Dependency) dependency;
         if (VULNERABLE_GAV_DATA.contains(
-            new GAVWithClassifier(dep.getGroupId(), dep.getArtifactId(), dep.getVersion(),
-                dep.getClassifier()))) {
+            new GAVWithClassifier(
+                dep.getGroupId(), dep.getArtifactId(), dep.getVersion(), dep.getClassifier()))) {
           return true;
         }
       }
@@ -50,11 +51,13 @@ public class POMDetector {
     return false;
   }
 
-
   private static boolean isVulnerableProject(MavenProject mavenProject) {
     if (VULNERABLE_GAV_DATA.contains(
-        new GAVWithClassifier(mavenProject.getGroupId(), mavenProject.getArtifactId(),
-            mavenProject.getVersion(), ""))) {
+        new GAVWithClassifier(
+            mavenProject.getGroupId(),
+            mavenProject.getArtifactId(),
+            mavenProject.getVersion(),
+            ""))) {
       return true;
     }
     MavenProject parent = mavenProject.getParent();
