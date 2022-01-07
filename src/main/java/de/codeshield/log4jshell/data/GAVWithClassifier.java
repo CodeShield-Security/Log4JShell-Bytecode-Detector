@@ -9,8 +9,7 @@ public class GAVWithClassifier {
   private final String version;
   private final String classifier;
 
-  public GAVWithClassifier(String groupId, String artifactId, String version,
-      String classifier) {
+  public GAVWithClassifier(String groupId, String artifactId, String version, String classifier) {
     this.groupId = groupId;
     this.artifactId = artifactId;
     this.version = version;
@@ -26,10 +25,10 @@ public class GAVWithClassifier {
       return false;
     }
     GAVWithClassifier that = (GAVWithClassifier) o;
-    return Objects.equals(groupId, that.groupId) &&
-        Objects.equals(artifactId, that.artifactId) &&
-        Objects.equals(version, that.version) &&
-        Objects.equals(classifier, that.classifier);
+    return Objects.equals(groupId, that.groupId)
+        && Objects.equals(artifactId, that.artifactId)
+        && Objects.equals(version, that.version)
+        && Objects.equals(classifier, that.classifier);
   }
 
   @Override

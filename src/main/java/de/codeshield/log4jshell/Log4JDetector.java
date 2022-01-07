@@ -1,5 +1,9 @@
 package de.codeshield.log4jshell;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.filefilter.DirectoryFileFilter;
+import org.apache.commons.io.filefilter.RegexFileFilter;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -10,9 +14,6 @@ import java.util.Collection;
 import java.util.Enumeration;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.filefilter.DirectoryFileFilter;
-import org.apache.commons.io.filefilter.RegexFileFilter;
 
 /**
  * A simple command line tool that scans a jar file for the CVE-2021-44228 vulnerability that
@@ -37,7 +38,8 @@ public class Log4JDetector {
     detector.run(args[0]);
   }
 
-  //Taken from https://stackoverflow.com/questions/981578/how-to-unzip-files-recursively-in-java/7108813#7108813
+  // Taken from
+  // https://stackoverflow.com/questions/981578/how-to-unzip-files-recursively-in-java/7108813#7108813
   public static String extractFolder(String zipFile) throws IOException {
     int buffer = 2048;
     File file = new File(zipFile);
@@ -89,30 +91,26 @@ public class Log4JDetector {
 
   public boolean run(String pathToJarFile) throws IOException {
     String folder = extractFolder(pathToJarFile);
-    Collection<File> pomFiles = FileUtils.listFiles(
-        new File(folder),
-        new RegexFileFilter("^(pom.xml)"),
-        DirectoryFileFilter.DIRECTORY
-    );
+    Collection<File> pomFiles =
+        FileUtils.listFiles(
+            new File(folder), new RegexFileFilter("^(pom.xml)"), DirectoryFileFilter.DIRECTORY);
     boolean isVulnerable = false;
     for (File pomFile : pomFiles) {
       try (FileInputStream is = new FileInputStream(pomFile)) {
-        //Check if a pom file matches one of the pre-computed groupId:artifactId:version
+        // Check if a pom file matches one of the pre-computed groupId:artifactId:version
         if (POMDetector.isVulnerablePOM(is)) {
           isVulnerable = true;
           System.err.println("CVE-2021-44228 found declared as dependency in " + pomFile);
         }
       }
     }
-    Collection<File> classFiles = FileUtils.listFiles(
-        new File(folder),
-        new RegexFileFilter(".*.class$"),
-        DirectoryFileFilter.DIRECTORY
-    );
+    Collection<File> classFiles =
+        FileUtils.listFiles(
+            new File(folder), new RegexFileFilter(".*.class$"), DirectoryFileFilter.DIRECTORY);
 
     for (File classFile : classFiles) {
       try (FileInputStream is = new FileInputStream(classFile)) {
-        //Check if a class file matches one of the pre-computed vulnerable SHAs.
+        // Check if a class file matches one of the pre-computed vulnerable SHAs.
         if (ClassDetector.isVulnerableClass(is)) {
           isVulnerable = true;
           System.err.println("CVE-2021-44228 found declared as dependency in " + classFile);
@@ -125,5 +123,4 @@ public class Log4JDetector {
     FileUtils.deleteDirectory(new File(folder));
     return isVulnerable;
   }
-
 }

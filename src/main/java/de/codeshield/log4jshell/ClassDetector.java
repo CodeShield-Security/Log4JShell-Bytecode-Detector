@@ -1,10 +1,11 @@
 package de.codeshield.log4jshell;
 
 import de.codeshield.log4jshell.data.VulnerableClassSHAData;
+import org.apache.commons.codec.digest.DigestUtils;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Set;
-import org.apache.commons.codec.digest.DigestUtils;
 
 public class ClassDetector {
 

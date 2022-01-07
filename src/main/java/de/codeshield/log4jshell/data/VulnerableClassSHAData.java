@@ -2,6 +2,7 @@ package de.codeshield.log4jshell.data;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,12 +23,11 @@ public class VulnerableClassSHAData {
         vulnerableSHAs.add(vulnerableClassSha[1]);
       }
       csvReader.close();
-    }  catch (IOException e) {
-      System.err.println("Error reading CSV file ("+CSV_DATA+")");
+    } catch (IOException e) {
+      System.err.println("Error reading CSV file (" + CSV_DATA + ")");
     } catch (CsvException e) {
-      System.err.println("Error parsing CSV file ("+CSV_DATA+")");
+      System.err.println("Error parsing CSV file (" + CSV_DATA + ")");
     }
     return vulnerableSHAs;
   }
-
 }
