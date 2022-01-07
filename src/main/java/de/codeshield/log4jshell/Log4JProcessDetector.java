@@ -39,7 +39,7 @@ public class Log4JProcessDetector {
           try {
             Log4JDetector detector = new Log4JDetector();
             System.out.println("Scanning jar file " + jarFile);
-            // detector.run(jarFile);
+             detector.run(jarFile);
           } catch (Exception e) {
             System.out.println("Could not scan jar file " + jarFile);
           }
