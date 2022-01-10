@@ -11893,6 +11893,7 @@ org.apache.logging.log4j,log4j-core,2.13.2,,,nvd
 org.apache.logging.log4j,log4j-core,2.13.3,,,nvd
 org.apache.logging.log4j,log4j-core,2.14.0,,,nvd
 org.apache.logging.log4j,log4j-core,2.14.1,,,nvd
+org.apache.logging.log4j,log4j-core,2.15.0,,,nvd
 org.apache.logging.log4j,log4j-core,2.2,,,nvd
 org.apache.logging.log4j,log4j-core,2.3,,,nvd
 org.apache.logging.log4j,log4j-core,2.4,,,nvd
