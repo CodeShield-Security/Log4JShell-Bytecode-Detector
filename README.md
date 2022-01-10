@@ -8,7 +8,7 @@ Log4jShell Bytecode Detector is an open source tool that helps identify if a jar
 
 ## 📝 How to run
 
-1. Download the [jar file](https://github.com/CodeShield-Security/Log4JShell-Bytecode-Detector/releases/download/v0.6.4/Log4JDetector-0.6.4-jar-with-dependencies.jar) under releases. 
+1. Download the [jar file](https://github.com/CodeShield-Security/Log4JShell-Bytecode-Detector/releases/download/v0.6.3/Log4JDetector-0.6.3-jar-with-dependencies.jar) under releases. 
 2. Run `java -cp <PATH_TO_DOWNLOADED_JAR> de.codeshield.log4jshell.Log4JDetector <ABSOLUTE_PATH_TO_JAR_TO_CHECK>`
 
 
@@ -21,7 +21,7 @@ CVE-2021-44228 found in class file org/apache/logging/log4j/core/net/JndiManager
 
 ## 📝 How to run on a live server (no need to stop your running Java instances)
 
-1. Download the [jar file](https://github.com/CodeShield-Security/Log4JShell-Bytecode-Detector/releases/download/v0.6.4/Log4JDetector-0.6.4-jar-with-dependencies.jar) under releases.
+1. Download the [jar file](https://github.com/CodeShield-Security/Log4JShell-Bytecode-Detector/releases/download/v0.6.3/Log4JDetector-0.6.3-jar-with-dependencies.jar) under releases.
 2. Run `java -cp <PATH_TO_DOWNLOADED_JAR> de.codeshield.log4jshell.Log4JProcessDetector`
 3. The jar searches the classpath of all running java processes for vulnerable log4j instances
 
