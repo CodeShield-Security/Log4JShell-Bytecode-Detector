@@ -7,7 +7,7 @@
 
     <groupId>de.codeshield.log4shell</groupId>
     <artifactId>Log4JDetector</artifactId>
-    <version>0.6.4</version>
+    <version>0.7.0</version>
 
     <name>cve-2021-44228-detector</name>
     <url>https://codeshield.io</url>
