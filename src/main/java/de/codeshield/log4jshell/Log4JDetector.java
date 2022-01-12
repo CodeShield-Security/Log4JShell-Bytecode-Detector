@@ -113,7 +113,7 @@ public class Log4JDetector {
         // Check if a class file matches one of the pre-computed vulnerable SHAs.
         if (ClassDetector.isVulnerableClass(is)) {
           isVulnerable = true;
-          System.err.println("CVE-2021-44228 found declared as dependency in " + classFile);
+          System.err.println("CVE-2021-44228 found in class file " + classFile);
         }
       }
     }
