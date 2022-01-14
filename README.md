@@ -103,7 +103,9 @@ The list of hashes and maven artifacts is not complete. We will regularly update
 This tool was co-created by the CodeShield co-founders
 
 * Andreas Dann <andreas.dann@codeshield.io>
-* Johannes Spaeth  <johannes.spaeth@codeshield.io> 
+* Johannes Spaeth <johannes.spaeth@codeshield.io> 
+* Manuel Benz <manuel.benz@codeshield.io> 
+
 
 Feedback is welcome!
 
